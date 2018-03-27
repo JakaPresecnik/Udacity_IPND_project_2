@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="banner box">
+        <h1>My Notes</h1>
+        <h3>Content:</h3>
+        <ul class="nav">
+            <li><a href="#components">Components</a></li>
+            <li><a href="#structure">Structure</a></li>
+            <li><a href="#summary">Summary</a></li>
+        </ul>
+        <div class="components box" id="components">
+            <h2>Components of the Web</h2>
+            <div class="box content">
+                <p>Let's take a step back for a second and talk about the major pieces of the web. The major pieces are you, your computer running a web browser, the Internet, and servers.
+                    <p>Your browser makes requests via the Internet to servers. These requests are using a protocol called HTTP. And the servers respond with files that the browser displays.</p>
+                    <p>Some examples of browsers include Chrome, Safari, Firefox, Internet Explorer, and Edge. You're probably running one of those right this moment.</p>
+                    <p>These servers are computers just like yours except they are optimized for sitting in a closet and hosting files rather than sitting on your desk browsing these files. And the protocol HTTP is just a very simple protocol that your browser uses to communicate with these servers. We'll mostly be focusing on the browser component in this section for rendering HTML files.</p>
+                    <p>On the next page, see if you can match up the visual web components with their respective definitions.</p>
+            </div>
+        </div>
+        <div class="components box" id="structure">
+            <h2>HTML Document Structure</h2>
+            <img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/January/588bdc63_components/components.png" alt="Components of the internet scheme">
+            <div class="box content">
+                <p>The concept of code structure will come up frequently thoughout this Nanodegree program. That's because programmers write code not just for computers, but for people as well. Writing code that people can easily read is a <strong>VERY</strong> important idea in computer programming. And a huge part of writing good code is structuring it well.</p>
+                <p>If you've ever written an English essay, you're familiar with the purpose of indenting every paragraph. It's a visual marker that a new idea has begun. Indentation serves a similar purpose in writing code. Some languages have slightly different rules about proper indentation, but the concept is generally the same as in English - a new indent is a new idea.</p>
+                <p>One big difference between indenting programming languages and indenting English, however, is that an indentation level persists throughout an idea. In HTML particularly, the indentation level increases when an idea begins and decreases when an idea is finished. If this is a bit confusing, let's look at an example:</p>
+                <img src="https://d17h27t6h515a5.cloudfront.net/topher/2017/January/58902526_example-doc-structure-ipnd/example-doc-structure-ipnd.png" alt="Example screenshot">
+            </div>
+            <div class="box content">
+                <h4>Let's dissect this code a bit:</h4>
+                <ol>
+                    <li>The first line is something that should appear on every webpage you make. <code>&lt;!DOCTYPE html&gt;</code> defines the type of the document so the browser will render it correctly.</li>
+                    <li>The <code>&lt;html&gt;</code> tag opens our document. Everything that shows on the webpage is placed within this tag.</li>
+                    <li>The <code>&lt;head&gt;</code> tag defines metadata for our web page. This includes the title of the page (this is what appears in the top of your tab or browser window). Notice that the <code>&lt;head&gt;</code> tag is indented to a new level because the <code>&lt;head&gt;</code> tag was opened but not closed (a new idea was started but not completed). Moreso, the <code>&lt;title&gt;</code> tag is indented another level further (the <code>&lt;head&gt;</code> tag was opened but not closed).</li>
+                    <li>The <code>&lt;title&gt;</code> tag is closed on the same line it was opened which we usually do if the content of a tag is short. On the other hand, the <code>&lt;head&gt;</code> tag is closed on a different line. The closing tag is indented to the same level as the matching opening one.</li>
+                </ol>
+                <p>Now take a look at the contents of the <code>&lt;body&gt;</code> tag. Is there anything about the structure that is surprising to you? Notice that inside the <code>&lt;body&gt;</code> tags you have the content of the web page. You can see an <code>&lt;h1&gt;</code> tag that is indented just inside the body as well as a <code>&lt;p&gt;</code> tag that is on the same level of indentation as the <code>&lt;h1&gt;</code>. This is an important distinction. Both the header and paragraph are child elements of the body.</p>
+            </div>
+        </div>
+        <div class="components box" id="summary">
+            <h2>Summary</h2>
+            <div class="box content">
+                <h3>The World Wide Web</h3>
+                <p>The web is composed largely of <strong>HTML</strong> documents. HTML stands for <em>HyperText Markup Language</em> and is the language the browsers use to interpret web pages. The components of the web include the <strong>client</strong> (your computer and browser), the <strong>Internet</strong>, and <strong>servers</strong>. The client and servers interact through something called the <strong>Hypertext Transfer Protocol (HTTP)</strong>.</p>
+            </div>
+            <div class="box content">
+                <h3>Basic HTML Elements</h3>
+                <p><strong>HTML elements</strong> are what we use to tell a web browser how to display content on a web page.</p>
+                <p>Most HTML elements consist of an <strong>opening</strong> and a <strong>closing</strong> tag with some <strong>content</strong> between them.</p>
+                <p><code>&lt;b&gt;text&lt;/b&gt;</code> Makes the 'text' content <b>bold</b>
+                    <br>
+                    <code>&lt;em&gt;text&lt;/em&gt;</code> Makes the 'text' content <em>italic</em></p>
+            </div>
+            <div class="box content">
+                <h3>HTML Attributes</h3>
+                <p>Some elements accept additional values called <strong>attributes</strong> in their opening tags. Attributes provide additional information to the browser. For example, the anchor tag takes an attribute called <code>href</code> that defines a URL to link to.</p>
+                <p><code>&lt;a href="url"&gt;link&lt;/a&gt;</code> Creates a hyperlink to the <code>href</code> attribute value <code>url</code> and names it link
+                    <br>
+                    <code>&lt;img src="url" alt="text"&gt;</code> Displays the image hosted at the <code>src</code> attribute value "url" (this can also be a path to a local file on your computer). If the image cannot be displayed, then the <code>alt</code> attribute value "text" is shown.</p>
+            </div>
+            <div class="box content">
+                <h3>More HTML Elements</h3>
+                <ul>
+                    <li><code>&lt;p&gt;text&lt;/p&gt;</code> Defines a paragraph. The content of the <code>&lt;p&gt;</code> element is in a "box"</li>
+                    <li><code>&lt;br&gt;</code> Creates a line break</li>
+                    <li><code>&lt;div&gt;content&lt;/div&gt;</code> Creates a "box" container element</li>
+                    <li><code>&lt;span&gt;content&lt;/span&gt;</code> Creates an "inline" container element</li>
+                </ul>
+            </div>
+        </div>
+        <p class="nav">Back to <a href="#top">Notes</a></p>
+    </div>
+</body>
